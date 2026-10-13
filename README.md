@@ -1,1 +1,284 @@
 # AT1AV1ANDRE
+[index.html](https://github.com/user-attachments/files/33390069/index.html)
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doce Sabor Confeitaria</title>
+  <style>
+    :root {
+      --rosa: #d96b83;
+      --rosa-claro: #fff0f3;
+      --creme: #fffaf5;
+      --marrom: #553b3b;
+      --texto: #5c4a4a;
+      --branco: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--creme);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--branco);
+      border-bottom: 1px solid #f3dfe3;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .brand { font-size: 1.25rem; font-weight: 800; color: var(--marrom); }
+    .brand span { color: var(--rosa); font-size: .72rem; vertical-align: top; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: var(--texto); text-decoration: none; font-weight: 700; font-size: .94rem; }
+    nav a:hover { color: var(--rosa); }
+    .hero {
+      text-align: center;
+      padding: 86px 22px 90px;
+      background: linear-gradient(135deg, #fff0f3, #fff8ee);
+    }
+    .hero .emoji { font-size: 3rem; }
+    h1 { color: var(--marrom); font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin: 16px auto; }
+    .hero p { max-width: 600px; margin: 0 auto 26px; font-size: 1.1rem; }
+    .button {
+      display: inline-block; background: var(--rosa); color: white; text-decoration: none;
+      border: 0; border-radius: 999px; padding: 12px 22px; font-size: 1rem;
+      font-weight: 700; cursor: pointer; transition: transform .15s, background .15s;
+    }
+    .button:hover { background: #c65770; transform: translateY(-1px); }
+    .button.secondary { background: var(--marrom); }
+    section { max-width: 1100px; padding: 62px 22px; margin: auto; }
+    .section-title { text-align: center; margin: 0 0 10px; color: var(--marrom); font-size: 2rem; }
+    .section-intro { text-align: center; max-width: 680px; margin: 0 auto 32px; }
+    #sobre { text-align: center; max-width: 800px; }
+    .products {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .product {
+      background: white; border: 1px solid #f2dfe3; border-radius: 18px; padding: 24px;
+      text-align: center; box-shadow: 0 8px 24px #70404a0b;
+    }
+    .product-emoji { font-size: 3.3rem; }
+    .product h3 { color: var(--marrom); margin: 8px 0; }
+    .price { color: var(--rosa); font-size: 1.35rem; font-weight: 800; margin: 16px 0; }
+    .product button { width: 100%; }
+    .order {
+      margin-top: 30px; background: white; border: 1px solid #f2dfe3; border-radius: 18px;
+      padding: 24px;
+    }
+    .order h3 { color: var(--marrom); margin-top: 0; }
+    .order-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f4e7e9; }
+    .order-item button { border: 0; background: transparent; color: #b5425d; cursor: pointer; font-weight: 700; }
+    .order-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+    .total { font-size: 1.2rem; color: var(--marrom); font-weight: 800; }
+    .faq { max-width: 800px; margin: auto; }
+    details { background: white; border: 1px solid #f2dfe3; border-radius: 12px; padding: 16px 18px; margin: 12px 0; }
+    summary { color: var(--marrom); font-weight: 700; cursor: pointer; }
+    details p { margin-bottom: 0; }
+    #contato { text-align: center; }
+    footer { background: #553b3b; color: white; text-align: center; padding: 22px; font-size: .9rem; }
+    .notice { font-size: .85rem; color: #866e6e; margin-top: 12px; }
+    @media (max-width: 720px) {
+      .products { grid-template-columns: 1fr; }
+      .nav { justify-content: center; }
+      nav { justify-content: center; }
+      .hero { padding: 60px 20px; }
+      section { padding: 46px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#" style="text-decoration:none">🍰 Doce Sabor <span>BETA</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="emoji">🧁</div>
+      <h1>Bolos e doces feitos com carinho</h1>
+      <p>Monte seu pedido aqui embaixo e depois é só mandar pra gente.</p>
+      <a class="button" href="#produtos">Ver produtos</a>
+    </div>
+
+    <section id="sobre">
+      <h2 class="section-title">Sobre</h2>
+      <p>A Doce Sabor nasceu na cozinha de casa, com receitas de família. Fazemos bolos, tortas e docinhos personalizados, sempre na hora.</p>
+      <p class="notice">Página em fase de teste!</p>
+    </section>
+
+    <section id="produtos">
+      <h2 class="section-title">Nossos produtos</h2>
+      <p class="section-intro">Escolha seus favoritos e adicione ao pedido.</p>
+      <div class="products">
+        <article class="product">
+          <div class="product-emoji">🎂</div>
+          <h3>Bolo decorado</h3>
+          <p>Sabores e recheios variados.</p>
+          <div class="price">R$ 80,00</div>
+          <button class="button" onclick="addItem('Bolo decorado', 80)">Adicionar ao pedido</button>
+        </article>
+        <article class="product">
+          <div class="product-emoji">🍫</div>
+          <h3>Docinhos (cento)</h3>
+          <p>Brigadeiro, beijinho e cajuzinho.</p>
+          <div class="price">R$ 90,00</div>
+          <button class="button" onclick="addItem('Docinhos (cento)', 90)">Adicionar ao pedido</button>
+        </article>
+        <article class="product">
+          <div class="product-emoji">🥧</div>
+          <h3>Torta</h3>
+          <p>Limão, morango ou chocolate.</p>
+          <div class="price">R$ 55,00</div>
+          <button class="button" onclick="addItem('Torta', 55)">Adicionar ao pedido</button>
+        </article>
+      </div>
+
+      <div class="order" id="pedido">
+        <h3>🛒 Seu pedido</h3>
+        <div id="order-items"><p id="empty">Nada por aqui ainda...</p></div>
+        <div class="order-bottom">
+          <div class="total">Total: <span id="total">R$ 0,00</span></div>
+          <button class="button" onclick="sendOrder()">Finalizar pelo WhatsApp</button>
+        </div>
+        <p class="notice">Antes de usar, troque o número de WhatsApp no código pelo número da confeitaria.</p>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <h2 class="section-title">Dúvidas frequentes</h2>
+      <div class="faq">
+        <details>
+          <summary>Com quanto tempo de antecedência devo encomendar?</summary>
+          <p>De 3 a 5 dias, dependendo do tamanho do pedido.</p>
+        </details>
+        <details>
+          <summary>Vocês entregam?</summary>
+          <p>Sim, combinamos o valor da entrega pelo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Dá pra personalizar o bolo?</summary>
+          <p>Dá! Escolha tema, cores e recheio na hora de conversar com a gente.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="section-title">Contato</h2>
+      <p>Quer fazer uma encomenda ou tirar uma dúvida?</p>
+      <button class="button secondary" onclick="contactWhatsApp()">Falar pelo WhatsApp</button>
+    </section>
+  </main>
+
+  <footer>© 2026 Doce Sabor · versão beta · feito como projeto de estudo</footer>
+
+  <script>
+    // IMPORTANTE: coloque o número da confeitaria com código do país e DDD.
+    // Exemplo do formato: 5511999999999 (somente números).
+    const WHATSAPP_NUMBER = "5500000000000";
+
+    const cart = [];
+
+    function money(value) {
+      return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function addItem(name, price) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      renderCart();
+    }
+
+    function removeItem(name) {
+      const index = cart.findIndex(item => item.name === name);
+      if (index !== -1) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+    }
+
+    function renderCart() {
+      const container = document.getElementById("order-items");
+      const totalElement = document.getElementById("total");
+      container.innerHTML = "";
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p id="empty">Nada por aqui ainda...</p>';
+        totalElement.textContent = money(0);
+        return;
+      }
+
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+        const row = document.createElement("div");
+        row.className = "order-item";
+
+        const description = document.createElement("span");
+        description.textContent = `${item.name} × ${item.quantity} — ${money(item.price * item.quantity)}`;
+
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.textContent = "Remover";
+        remove.setAttribute("aria-label", `Remover ${item.name} do pedido`);
+        remove.addEventListener("click", () => removeItem(item.name));
+
+        row.append(description, remove);
+        container.appendChild(row);
+      });
+      totalElement.textContent = money(total);
+    }
+
+    function openWhatsApp(message) {
+      if (WHATSAPP_NUMBER === "5500000000000") {
+        alert("Configure o número de WhatsApp da confeitaria no código antes de usar esta função.");
+        return;
+      }
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    function sendOrder() {
+      if (cart.length === 0) {
+        alert("Adicione pelo menos um produto ao pedido.");
+        return;
+      }
+      const lines = cart.map(item =>
+        `- ${item.name} x${item.quantity}: ${money(item.price * item.quantity)}`
+      );
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const message = `Olá! Gostaria de fazer este pedido na Doce Sabor:\n\n${lines.join("\n")}\n\nTotal dos produtos: ${money(total)}\n\nComo podemos combinar a encomenda e a entrega?`;
+      openWhatsApp(message);
+    }
+
+    function contactWhatsApp() {
+      openWhatsApp("Olá! Gostaria de saber mais sobre os produtos da Doce Sabor.");
+    }
+  </script>
+</body>
+</html>
